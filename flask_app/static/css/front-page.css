@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap');
+
+/* ===== GLOBAL ===== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+  line-height: 2.2rem;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #252627;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 30px;
+  line-height: 4rem;
+}
+
+blockquote {
+  display: grid;
+  place-content: center;
+  max-width: 600px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.500);
+}
+
+dl {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+li {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  vertical-align: middle;
+}
+
+/* ===== HEADER/FOOTER ===== */
+.header {
+  position:fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  background-color: black;
+}
+
+.footer {
+  position:fixed;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem;
+  background-color: black;
+}
+
+.footer .icons {
+  height: 2rem;
+}
+
+.icons{
+  height: 2.4rem;
+  margin: 0 1.5rem;
+}
+
+/* ===== HERO ===== */
+.hero {
+  font-size: 1.5rem;
+  padding: 10rem;
+  height: 100vh;
+  background:
+    linear-gradient(to left, rgba(0, 0, 0, 0.100), rgba(0, 0, 0, 0.900)),
+    url(/static/imgs/hero-image.jpg) center / cover;
+    display: grid;
+    place-content: center;
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+  width: 700px;
+}
+.hero-content .links {
+  margin-top: 2rem;
+}
+
+.links a {
+  outline: 1px solid white;
+  padding: 0.7rem;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.links a:hover {
+  outline: 1px solid darkgray;
+  padding: 0.7rem;
+  text-decoration: none;
+}
+
+.definition {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  font-size: 1.3rem;
+  scroll-snap-type: y mandatory;
+  overflow-x: auto;
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+}
+
+.taiko {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background:
+  linear-gradient(to right, rgba(0, 0, 0, 0.500), rgba(0, 0, 0)),
+  url(/static/imgs/taiko-bg.jpg) center / cover;
+  scroll-snap-align: start;
+}
+
+.sdvx {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background:
+  linear-gradient(to right, rgba(0, 0, 0, 0.500), rgba(0, 0, 0)),
+  url(/static/imgs/sdvx-bg.png) top / cover;
+  scroll-snap-align: start;
+}
+
+.iidx {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background:
+  linear-gradient(to right, rgba(0, 0, 0, 0.500), rgba(0, 0, 0)),
+  url(/static/imgs/iidx-bg.png) center / cover;
+  scroll-snap-align: start;
+}
+
+.product-media {
+  padding: 5rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  place-content: center;
+  gap: 2rem;
+}
+
+.taiko > .product-logo {
+  width: 150px;
+}
+
+.product-logo, iframe {
+  margin: 0 auto;
+}
+
+.product-logo {
+  width: 500px
+}
+
+.product-details {
+  display: grid;
+  place-content: center;
+  padding: 5rem;
+}
+
+.product-details button {
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.400);
+  padding: 0.5rem 2rem;
+  border: 2px solid white;
+}
+
+/* ===== MAP ===== */
+.arcade_location {
+  text-align: center;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.800)),
+  url(/static/imgs/location-bg.jpg) center / cover;
+}
+
+#map {
+  line-height: none;
+  width: 800px;
+  height: 500px;
+}
+
+#searchTextField {
+  color: black;
+  width: 800px;
+}

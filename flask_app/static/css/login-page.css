@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap');
+
+/* ===== GLOBAL ===== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+  line-height: 2.2rem;
+  color: white;
+}
+
+body {
+  background-color: #252627;
+}
+
+p {
+  color: crimson;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.900)),
+    url(/static/imgs/login-bg.jpg) center / cover;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  background-color: black;
+}
+
+.logo {
+  font-weight: light;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+
+/* ===== LOGIN/REGISTER ===== */
+.form-box {
+  text-align: center;
+  width: 480px;
+  /* height: 500px; */
+  margin: 6% auto;
+  border-radius: 1rem;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #00000091;
+}
+
+.btn-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+}
+
+.toggle-btn {
+  padding: 0 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+.form-group {
+  width: 280px;
+}
+
+.input-field {
+  background: transparent;
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+
+.submit-btn {
+  width: 65%;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  background: transparent;
+  border-radius: 30px;
+  border: 1px solid white;
+}
+
+.validation {
+  padding: 20px;
+}
+
+#btn {
+  top: 0;
+  left: 18px;
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  border-bottom: 2px solid white;
+  transition: 300ms;
+}
+
+#form {
+  position: relative;
+  left: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  transition: 300ms;
+}
+
+#login {
+  margin-top: 70px;
+}

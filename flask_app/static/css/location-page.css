@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+
+body {
+  background-color: #252627;
+  color: white;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.100), rgba(0, 0, 0, 0.900)),
+    url(/static/imgs/location-bg.jpg) center / cover;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  background-color: black;
+}
+
+.logo {
+  font-weight: light;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+/* ===== MAP ===== */
+#map {
+  width: 800px;
+  height: 500px;
+}
+
+#searchTextField {
+  color: black;
+  width: 800px;
+  padding: 0.5rem 1rem;
+}
