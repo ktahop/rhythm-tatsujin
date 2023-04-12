@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/front-page.css') }}">
+  <title>Rhythm Tatsujin</title>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <h2>Rhythm Tatsujin</h2>
+    </div>
+    <div class="game-links">
+      <a href="#taiko"><img class="icons" src="{{url_for('static', filename='imgs/taiko-icon.png')}}" alt="taiko icon"></a>
+      <a href="#sdvx"><img class="icons" src="{{url_for('static', filename='imgs/sdvx-icon.png')}}" alt="taiko icon"></a>
+      <a href="#iidx"><img class="icons" src="{{url_for('static', filename='imgs/iidx-icon.png')}}" alt="taiko icon"></a>
+    </div>
+    <div class="nav-links">
+      {% if logged_user %}
+        <a class="login" href="/logout">Logout</a>
+      {% else %}
+        <a class="login" href="/login">Login/Sign Up</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>The Arcade Experience at Home</h1>
+      <p class="definition">Tatsujin | 達人 <span>(noun)</span> - master/expert</p>
+      <p>From drumming on a taiko, stratching with a turntable, our custom-made controllers are a perfect way to play your favorite rhythm games at the comfort your home!</p>
+      <a href="#main">Explore Products</a>
+    </div>
+  </div>
+  <div class="main" id="main">
+    <div class="taiko" id="taiko">
+      <div class="product-content">
+        <div class="product-media">
+          <img class="product-logo" src="{{ url_for('static', filename='/imgs/taiko-logo.png') }}" alt="taiko logo">
+          <iframe width="540" height="295" src="https://www.youtube.com/embed/fN6ROKipOkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <blockquote>With only two notes from the iconic duo Don and Ka, Tatsujin no Tatsujin (Taiko Drum Master) is Namco-Bandai's premiere beginner-friendly game. Don't be fooled with the ease of two notes, as the difficulty can ramp up significantly to those that wants a challenge!</blockquote>
+        </div>
+        <div class="product-details">
+          <h1>Bachi Tatsujin: $50</h1>
+          <p>The Bachi Tatsujin controller is a lightweight/compact controller emulating the arcade right at home!</p>
+          <dl>
+            <li>Includes - 1x taiko drum controller, 2x drum sticks</li>
+            <li>System Compatibility - PC, Nintendo Switch</li>
+            <li>Game(s) Compatibility - Taiko no Tatsujin: Drum 'n' Fun! (Switch), Taiko no Tatsujin: Rhythm Heaven (Switch)</li>
+          </dl>
+          <form action="/taiko_checkout", method="post">
+            <button type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="sdvx" id="sdvx">
+      <div class="product-content">
+        <div class="product-media">
+          <img class="product-logo" src="{{ url_for('static', filename='/imgs/sdvx-logo.png') }}" alt="sdvx logo">
+          <iframe width="540" height="295" src="https://www.youtube.com/embed/ik5VGRuxEp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <blockquote>From Konami's newest edition to the Bemani series, Sound Voltex's popularity grows more with the appeal of it's level complexity utilizing two volume knobs mixed in with the traditional key kayout. Experience the game!</blockquote>
+        </div>
+        <div class="product-details">
+          <h1>SoundFX Tatsujin: $120</h1>
+          <p>The SoundFX Tatsujin controller is built for durability with it's metal body and sleek acrylic panel while keeping it's compacted frame. All button/knob spacing is to arcade specs making it the prefect at-home arcade experience!</p>
+          <dl>
+            <li>Includes - 1x SDVX AC-style controller, 10x knob foam dampeners, 6x 50g spare Sanwa springs</li>
+            <li>Buttons Configuration - Sanwa push buttons, 100g Sanwa microswitches, 20g Sanwa springs</li>
+            <li>System Compatibility - PC</li>
+            <li>Game(s) Compatibility - Sound Voltex EXCEED GEAR Konasute (PC e-cloud subscription)</li>
+          </dl>
+          <form action="/soundfx_checkout", method="post">
+            <button type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="iidx" id="iidx">
+      <div class="product-content">
+        <div class="product-media">
+          <img class="product-logo" src="{{ url_for('static', filename='/imgs/iidx-logo.png') }}" alt="taiko logo">
+          <iframe width="540" height="295" src="https://www.youtube.com/embed/Bfw5ZESIXDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <blockquote>Konami's longest running series in the Bemani lineup, beatmaniaIIDX (typically pronounced "Two Dee Ecks"), is tailored for those who are experienced with rhythm games. With its 7-key piano layout and turntable simulating a DJ, the level of difficulty is not for the fient of heart. Soar through a wide range of genres ranging from EDM/Gabber/Speedcore to J-Pop/Hip-hop/RnB as you keep up with Bemani's most challenging but satisfying game!</blockquote>
+        </div>
+        <div class="product-details">
+          <h1>DJ Tatsujin: $160</h1>
+          <p>The DJ Tatsujin offers 1:1 sizing and spacing for both turntable and buttons. Our patented non-slip turntable cover ensures that players will confidently grip with any playstyle from full hand to pinky scratching to wrist scratching. </p>
+          <dl>
+            <li>Includes - 1x beatmaniaIIDX AC-style controller</li>
+            <li>Buttons Configuration - Sanwas push buttons, 50g Sanwa microswitches, 50g Sanwa springs</li>
+            <li>System Compatibility - PC/PS2</li>
+            <li>Games(s) Compatibility - beatmaniaIIDX Infinitas (PC e-cloud subscription)</li>
+          </dl>
+          <form action="/dj_checkout", method="post">
+            <button type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <a href="/location">
+      <img class="icons" src="{{url_for('static', filename='imgs/map-icon.png')}}" alt="taiko icon">Find the nearest arcade location near you!
+    </a>
+  </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="https://js.stripe.com/v3/" defer></script>
+</body>
+</html> 
