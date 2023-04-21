@@ -5,10 +5,6 @@ from flask_app import app, DOMAIN
 from flask_app.models.users_model import User
 
 stripe.api_key = os.environ.get('STRIPE_API_KEY')
-google_api_key = os.environ.get('GOOGLE_API_KEY')
-google_api = f"https://maps.googleapis.com/maps/api/js?key={google_api_key}&libraries=places&callback=initMap"
-
-
 
 # ===== STORE FRONT =====
 @app.route('/')
@@ -19,9 +15,9 @@ def index():
   return render_template("index.html")
 
 # ===== ARCADE LOCATION =====
-@app.route('/location')
-def location():
-    return render_template("location.html", google_api = google_api)
+# @app.route('/location')
+# def location():
+#     return render_template("location.html", google_api = google_api_key)
 
 # ===== CHECKOUT PAGE =====
 @app.route('/taiko_checkout', methods=['POST'])
