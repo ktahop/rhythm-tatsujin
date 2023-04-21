@@ -1,5 +1,5 @@
 # Rhythm Tatsujin
-> An e-commerce app with a focus on selling unique rhythm game controllers.
+> An e-commerce app with a focus on selling unique rhythm game controllers. Written in Python.
 
 ## Technologies Used
 - [_Flask_](https://flask.palletsprojects.com/en/2.2.x/)
